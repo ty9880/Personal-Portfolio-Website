@@ -1,11 +1,50 @@
-<div align="center">
+# Tyson Tucci | Personal Portfolio
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+A professional portfolio website built with Vue 3 and Tailwind CSS to showcase my experience in Business Analytics and Information Management.
 
-  <h1>Built with AI Studio</h2>
+## Features
+- Single-page responsive design
+- Clean, editorial aesthetic inspired by modern design portfolios
+- Mobile-friendly navigation
+- Detailed sections for Education, Experience, Leadership, and Skills
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## Tech Stack
+- **Framework:** Vue 3 (Composition API)
+- **Styling:** Tailwind CSS
+- **Icons:** Lucide Vue Next
+- **Build Tool:** Vite
+- **Deployment:** Google Cloud Run (via Express server)
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## Getting Started
 
-</div>
+### Prerequisites
+- Node.js (v18+)
+- npm
+
+### Installation
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Development
+Run the development server:
+```bash
+npm run dev
+```
+
+### Production
+Build the project:
+```bash
+npm run build
+```
+Start the production server:
+```bash
+npm start
+```
+
+## Structure
+- `src/`: Vue source files
+- `public/`: Static assets (headshot, etc.)
+- `server.ts`: Express server for serving the application
