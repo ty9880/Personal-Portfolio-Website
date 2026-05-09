@@ -119,7 +119,7 @@ onMounted(() => {
           <div class="order-1 md:order-2 flex justify-center md:justify-end">
             <div class="relative w-full max-w-md aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700">
               <img 
-                src="https://picsum.photos/seed/tyson/800/1000" 
+                :src="'/headshot.jpg'" 
                 alt="Tyson Tucci" 
                 class="w-full h-full object-cover scale-105 hover:scale-100 transition-transform duration-700"
                 referrerpolicy="no-referrer"
@@ -144,7 +144,7 @@ onMounted(() => {
               <p class="text-xl text-[#1A1A1A]/80 mb-4">{{ resumeData.education.degree }}</p>
               <div class="flex items-center gap-6 text-sm text-[#1A1A1A]/60">
                 <span class="flex items-center gap-2"><MapPin class="w-4 h-4" /> {{ resumeData.education.location }}</span>
-                <span class="flex items-center gap-2"><Award class="w-4 h-4" /> GPA: {{ resumeData.education.gpa }}</span>
+                <span v-if="resumeData.education.gpa" class="flex items-center gap-2"><Award class="w-4 h-4" /> GPA: {{ resumeData.education.gpa }}</span>
               </div>
             </div>
           </div>
@@ -223,7 +223,7 @@ onMounted(() => {
               </div>
             </div>
             
-            <div class="space-y-8">
+            <div v-if="resumeData.certifications && resumeData.certifications.length" class="space-y-8">
               <h3 class="text-sm uppercase tracking-[0.2em] text-[#8B7E66] font-bold">Certifications</h3>
               <div class="grid sm:grid-cols-2 gap-6">
                 <div v-for="cert in resumeData.certifications" :key="cert" class="p-6 bg-[#F7F5F2] rounded-xl flex items-start gap-4">
@@ -258,7 +258,7 @@ onMounted(() => {
             </div>
             <div class="space-y-1">
               <p class="text-[10px] uppercase tracking-widest text-[#8B7E66] font-bold">Location</p>
-              <p class="text-lg">West Lafayette, IN</p>
+              <p class="text-lg">{{ resumeData.location }}</p>
             </div>
           </div>
         </div>

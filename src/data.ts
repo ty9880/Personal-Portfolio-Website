@@ -1,28 +1,73 @@
-export const resumeData = {
+export interface ResumeData {
+  name: string;
+  title: string;
+  location: string;
+  phone: string;
+  email: string;
+  linkedin: string;
+  education: {
+    university: string;
+    degree: string;
+    location: string;
+    graduation: string;
+    gpa?: string;
+  };
+  experience: {
+    company: string;
+    role: string;
+    location: string;
+    period: string;
+    highlights: string[];
+  }[];
+  leadership: {
+    organization: string;
+    role: string;
+    location: string;
+    period: string;
+    highlights: string[];
+  }[];
+  skills: string[];
+  certifications?: string[];
+}
+
+export const resumeData: ResumeData = {
   name: "Tyson Tucci",
   title: "Business Analytics & Information Management Student",
-  location: "Normal, IL | West Lafayette, IN",
+  location: "Normal, IL",
   phone: "309-531-2890",
   email: "tysont04@gmail.com",
   linkedin: "linkedin.com/in/tyson-tucci",
   education: {
-    university: "Purdue University, Mitchell E. Daniels, School of Business",
+    university: "Purdue University, Mitch Daniels School of Business",
     degree: "Bachelor of Science, Business Analytics and Information Management",
     location: "West Lafayette, IN",
-    graduation: "May 2026",
-    gpa: "3.26"
+    graduation: "May 2026"
   },
   experience: [
     {
-      company: "Hjerpe & Tennison CPAs, LLC",
+      company: "Osborn Barr Paramore (OBP)",
+      role: "Product Management Intern",
+      location: "St. Louis, MO (Remote)",
+      period: "May 2025 – August 2025",
+      highlights: [
+        "Built and deployed marketing email campaigns for Missouri Division of Tourism while performing QA testing to ensure accuracy and functionality",
+        "Managed website maintenance tickets and coordinated task progress using Jira in a fast-paced agency environment",
+        "Assisted with website and UX improvements for Santa’s Cottages in collaboration with development and creative teams",
+        "Participated in A/B testing and utilized Google Analytics and MRI-Simmons data to support user behavior and marketing analysis",
+        "Collaborated with fellow interns to develop a strategic marketing plan supporting Silver Dollar City’s 2026 expansion initiative",
+        "Updated and maintained website content through CMS platforms while troubleshooting content and functionality issues"
+      ]
+    },
+    {
+      company: "Hjerpe & Tennison CPAS, LLC",
       role: "Staff Accountant Intern",
       location: "Bloomington, IL",
       period: "May 2023 – August 2024",
       highlights: [
-        "Attended and contributed to staff and payroll meetings",
-        "Shadowed an experienced Staff Accountant 4 times a week, gaining experience in accounting software and managing client relations",
-        "Performed bookkeeping for multiple clients, managing transaction categorization and reconciliations",
-        "Processed payroll, handling wage calculations, tax deductions, and timely distribution to ensure employees received accurate compensation",
+        "Collaborated in staff and payroll meetings, contributing meaningful and impactful ideas",
+        "Shadowed an experienced Staff Accountant weekly, gaining hands-on experience in accounting software and managing client relations",
+        "Performed bookkeeping for multiple clients, ensuring accurate transaction categorization and reconciliations, while addressing client-specific needs",
+        "Processed payroll, handling wage calculation, tax deductions, and timely distribution to guarantee employees received accurate compensation",
         "Entered new client information into tax filing software, facilitating the setup and organization of client data for streamlined tax preparation"
       ]
     }
@@ -32,38 +77,26 @@ export const resumeData = {
       organization: "Purdue Swim Club",
       role: "President",
       location: "West Lafayette, IN",
-      period: "November 2024 - Present",
+      period: "November 2024 – January 2026",
       highlights: [
-        "Led club of over 200+ members, overseeing all operations, communications, and events to ensure smooth coordination and engagement",
+        "Led club of 150+ members, overseeing all operations, communications, and events to maintain smooth coordination and engagement",
         "Organized and scheduled swim meets with other universities, managing logistics, communication, and travel arrangements",
         "Arranged home meets with the Aquatics Center directors, ensuring scheduling, facility setup, and official assignments were taken care of",
-        "Negotiated with the Aquatics Center directors to secure an additional free pool rental per year for home meets, saving the club approximately $3,000 per year",
-        "Hosted and facilitated weekly officer board meetings, setting agendas, delegating responsibilities, and leading discussions to assure club was ran smoothly and effectively"
-      ]
-    },
-    {
-      organization: "Purdue Business Analytics and Information Management Association",
-      role: "Active Member",
-      location: "West Lafayette, IN",
-      period: "August 2023 - Present",
-      highlights: [
-        "Participate in weekly meetings, absorbing current business analytics concepts, and applying it to real world examples",
-        "Cooperate with club members on activities within meetings solving problems as a team to convey results",
-        "Engage in attentive listening to connect with guest speakers and club members, expanding and strengthening my network"
+        "Negotiated with the Aquatics Center directors to secure an additional free pool rental per year for home meets, saving approximately $3,000 per year",
+        "Facilitate weekly officer board meetings by setting agendas, delegating responsibilities, and leading discussions to ensure all club responsibilities are met"
       ]
     }
   ],
   skills: [
-    "Statistical Analysis",
-    "Microsoft Office (Excel Advanced)",
-    "Microsoft Access",
-    "QuickBooks Online",
-    "SmartVault",
-    "Lacerte"
-  ],
-  certifications: [
-    "Critical Thinking - Excel Advanced 2021",
-    "Microsoft Excel 2021 Advanced",
-    "QuickBooks Online ProAdvisor"
+    "Python",
+    "SQL",
+    "Google Analytics",
+    "Tableau",
+    "Minitab",
+    "Jira",
+    "API Integration",
+    "LLM Application Development",
+    "Figma",
+    "Microsoft Office"
   ]
 };
